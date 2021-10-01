@@ -46,12 +46,9 @@ def generate_random_container(
     """Generate a random list defined by the size and with no number bigger than maximum."""
     random_list = []
     for _ in range(size):
-        random_list.append(int(random.randint(0, maximum)))
+        random_list.append(random.randint(1, maximum))
     if make_tuple is True:
-        tuple_random = ()
-        for values in random_list:
-            tuple_random += (values,)
-        return tuple_random
+        return tuple(random_list)
     return random_list
 
     # : generate a list of random values
