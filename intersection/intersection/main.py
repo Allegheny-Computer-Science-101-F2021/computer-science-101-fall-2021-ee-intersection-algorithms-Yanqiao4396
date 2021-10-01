@@ -50,7 +50,7 @@ def generate_random_container(
     if make_tuple is True:
         tuple_random = ()
         for values in random_list:
-            tuple_random += (values,...)
+            tuple_random += (values, ...)
         return tuple_random
     return random_list
 
