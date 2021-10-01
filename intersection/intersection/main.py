@@ -48,7 +48,10 @@ def generate_random_container(
     for _ in range(size):
         random_list.append(random.randint(1, maximum))
     if make_tuple is True:
-        return tuple(random_list)
+        tuple_random = ()
+        for values in random_list:
+            tuple_random += (values,)
+        return tuple_random
     return random_list
 
     # : generate a list of random values
