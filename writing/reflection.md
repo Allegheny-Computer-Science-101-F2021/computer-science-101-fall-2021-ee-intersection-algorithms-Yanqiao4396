@@ -6,9 +6,7 @@
 
 ### Use eight fenced code blocks to provide output from eight different runs of `intersection` with different inputs
 
-: Summary of the runs for the List-based algorithms:
 
-: Summary of the runs for the ListSingle algorithm:
 Run 1: ListSingle with a small input
 Run 2: ListSingle with a large input
 ```
@@ -40,7 +38,7 @@ Program: intersection --number 2000 --maximum 100 --profile --approach ListDoubl
    └─ 0.003 list.append  <built-in>:0
          [2 frames hidden]  <built-in>
 ```
-: Summary of the runs for the ListDouble algorithm:
+
 Run 1: ListDouble with a small input
 Run 2: ListDouble with a large input
 ```
@@ -72,9 +70,7 @@ Program: intersection --number 2000 --maximum 100 --profile --approach ListDoubl
          [2 frames hidden]  <built-in>
 ```
 
-: Summary of the runs for the Tuple-based algorithms:
 
-: Summary of the runs for the TupleSingle algorithm:
 Run 1: TupleSingle with a small input
 Run 2: TupleSingle with a large input
 ```
@@ -131,13 +127,7 @@ Program: intersection --number 2000 --maximum 100 --profile --approach TupleDoub
 └─ 1.702 compute_intersection_tuple_double  intersection/main.py:96
 ```
 
-: Whenever possible, please use the same "small" and "large" inputs for both
-the List-based and Tuple-based algorithms.
 
-: Do not run the program with the `--display` option when conducting
-experiments!
-
-: Document and justify your choice for the `number` and `maximum` variables.
 
 #### Two outputs from running the `ListSingle` algorithm with different inputs
 
@@ -149,17 +139,7 @@ experiments!
 
 ## Performance Analysis
 
-: Provide three paragraphs that explain which algorithm is fastest, by how
-much it is faster, and how you knew that the it was faster, referencing the data
-in the aforementioned command outputs to support your response. You should make
-sure that you answer the following research questions:
 
-- RQ: Is intersection faster with a list or a tuple?
-- RQ: Is intersection faster with a double-for-loop or a single-for-loop?
-- RQ: Overall, what is the fastest approach for computing the intersection?
-
-: Make sure that your responses explain WHY certain algorithms are faster!
-: It is not sufficient to only explain WHICH algorithm is faster!
 
 Based on my experience and outcomes got from the program, I find that the listsingle
 is the fastest one and the tupledouble is the slowest one. And I want to explain it below
@@ -211,9 +191,7 @@ The first parameter assigns typer.Option(5) into the variable number and gives t
 integer.
 The other ones do the similar things.
 
-: Use a fenced code block to provide the requested source code
-: Write at least one paragraph to explain the request source code
-: Explain each of the command-line arguments for this program
+
 
 #### A function that can generate a data container with random values in it
 ```
@@ -232,17 +210,15 @@ def generate_random_container(
     return random_list
 ```
 This function generates a list or a tuple ( based on the requirements) to contain certain numbers of random values.
-I used append method to add values into the list and += operator to add values into the tuple.
-: Use a fenced code block to provide the requested source code
-: Write at least one paragraph to explain the request source code
-: Explain each line of source code in this function
+I used append method to add values into the list and += operator to add values into the tuple. And then what I did is just return those values. For the tuple, when we add some single values within, we should pay attention to add one more comma to let python know what we have now is tuple so that we can use concatenation.
+
 
 ### What was the greatest challenge that you faced when completing this assignment?
 The greatest challenge I met is how to get a relatively big enough outcome. Just because the TupleDouble is too slow,
 when I found a input which can make others' time consumptions moderately big, the TupleDouble took more than 5 minutes
 to output results.
-: Provide a one-paragraph response that answers this question in your own words.
+
 
 ### Leveraging your response to the previous question, how did you overcome the challenge?
 I asked professor Kap and he told me that I don't need meet that severe requirements seriously. So I noticed that. what I already had was good enough.
-: Provide a one-paragraph response that answers this question in your own words.
+
